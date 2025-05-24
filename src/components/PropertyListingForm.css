@@ -1,0 +1,481 @@
+/* PropertyListingForm.css */
+
+.property-listing-container {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  width: 100%;
+  padding: 0;
+  border: 1px solid #4e4e4e;
+  background-color: #fff;
+}
+
+.property-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section {
+  border-bottom: 1px solid #f2f2f2;
+  padding: 24px 32px;
+}
+
+.form-section h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #002f34;
+  margin-bottom: 20px;
+}
+
+.form-section h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #002f34;
+  margin-bottom: 10px;
+}
+
+/* Option groups for radio buttons */
+.option-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.option-item {
+  flex: 1;
+  min-width: 50px;
+}
+
+.option-item label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #c8c8c8;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  height: 36px;
+  transition: all 0.2s;
+}
+
+.option-item label.selected {
+  border-color: #002f34;
+  background-color: #e6f3f4;
+  color: #002f34;
+  font-weight: 500;
+}
+
+.hidden-radio {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Input fields */
+.input-group {
+  margin-bottom: 16px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: #406367;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+.react-select-container {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #c8c8c8;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #002f34;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  border-color: #002f34;
+  outline: none;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.character-count {
+  text-align: right;
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}
+
+/* Section titles */
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #002f34;
+  margin-bottom: 16px;
+  padding-top: 5px;
+}
+
+/* Image upload styles */
+.image-upload-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.image-upload-box,
+.image-preview-container,
+.image-placeholder {
+  aspect-ratio: 1/1;
+  border: 1px dashed #c8c8c8;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #f9f9f9;
+}
+
+.image-upload-input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.image-upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #002f34;
+  font-size: 12px;
+}
+
+.image-upload-label svg {
+  margin-bottom: 5px;
+  width: 24px;
+  height: 24px;
+}
+
+.image-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.remove-image-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* Location options */
+.location-options {
+  display: flex;
+  margin-bottom: 16px;
+  border: 1px solid #c8c8c8;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.location-option {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.location-option.selected {
+  background-color: #002f34;
+  color: white;
+}
+
+/* Review Your Details section */
+.review-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.user-profile-section {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.profile-photo-container {
+  position: relative;
+  margin-right: 20px;
+}
+
+.profile-photo {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: #003f34;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-initial {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.user-profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.remove-profile-btn {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  z-index: 2;
+}
+
+.profile-camera-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.profile-image-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.camera-icon-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.camera-icon-label svg {
+  width: 16px;
+  height: 16px;
+  color: #555;
+}
+
+.user-details-info {
+  flex: 1;
+}
+
+.name-field {
+  margin-bottom: 15px;
+}
+
+.name-field label {
+  display: block;
+  font-size: 14px;
+  color: #002f34;
+  margin-bottom: 8px;
+}
+
+.char-limit {
+  text-align: right;
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}
+
+/* Verification section */
+.verification-section {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.verification-section h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #002f34;
+  margin-bottom: 8px;
+}
+
+.verification-text {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.mobile-input-group {
+  margin-bottom: 15px;
+}
+
+.mobile-input-group label {
+  display: block;
+  font-size: 14px;
+  color: #002f34;
+  margin-bottom: 8px;
+}
+
+.mobile-input-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.country-code {
+  background-color: #f5f5f5;
+  padding: 10px 12px;
+  border-right: 1px solid #ccc;
+  font-size: 14px;
+  color: #555;
+  width: 50px;
+  text-align: center;
+}
+
+.mobile-field {
+  flex: 1;
+  border: none !important;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+/* Submit button */
+.submit-button {
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+  margin: 16px 0;
+  text-transform: uppercase;
+}
+
+.submit-button.active {
+  background-color: #002f34;
+  color: white;
+}
+
+.submit-button.disabled {
+  background-color: #e0e0e0;
+  color: #888;
+  cursor: not-allowed;
+}
+
+.info-text {
+  font-size: 12px;
+  color: #406367;
+  margin-top: 4px;
+}
+
+/* Specific sections */
+.price-section input {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .form-section {
+    padding: 20px 16px;
+  }
+  
+  .option-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  
+  .option-item {
+    min-width: 80px;
+    flex: 0 1 auto;
+  }
+  
+  .option-item label {
+    width: 100%;
+    height: 40px;
+    font-size: 12px;
+    padding: 8px;
+  }
+  
+  .image-upload-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form-section {
+    padding: 16px 12px;
+  }
+  
+  .option-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  
+  .option-item {
+    min-width: 70px;
+  }
+  
+  .option-item label {
+    height: 36px;
+    font-size: 11px;
+    padding: 4px;
+  }
+}

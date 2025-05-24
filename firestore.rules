@@ -1,0 +1,36 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow read/write access for development
+    match /{document=**} {
+      allow read, write: if true;
+    }
+    
+    // Note: The rules below are commented out but would be used in production
+    // for proper security. For now, we're allowing all access for development.
+    
+    /* 
+    // Property listings rules
+    match /propertyListings/{listingId} {
+      // Anyone can read property listings
+      allow read: if true;
+      
+      // Only authenticated users can create listings
+      allow create: if request.auth != null;
+      
+      // Users can only update or delete their own listings
+      allow update, delete: if request.auth != null && resource.data.userId == request.auth.uid;
+    }
+    
+    // User profiles
+    match /users/{userId} {
+      // Users can read any profile
+      allow read: if true;
+      
+      // Users can only write to their own profile
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
+    */
+  }
+}

@@ -1,38 +1,191 @@
+/* App.css - Main Application Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+
+  z-index: 1000;
+}
+
 .App {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #fff;
+  padding-left: 20vw;
+  padding-top: 4vw;
+  padding-right: 20vw;
+}
+
+/* Responsive padding for mobile screens */
+@media screen and (max-width: 768px) {
+  .App {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 3vw;
+  }
+}
+
+/* Header styles */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 16px;
+  background-color: #fff;
+  position: relative;
+  z-index: 100;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  margin-right: 15px;
+  color: #002f34;
+}
+
+.header-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #002f34;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Category section */
+.category-section {
+  border: 1px solid #464646;
+  background-color: #fff;
+  border-bottom: none;
+  position: relative;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.category-content {
+  padding: 16px 24px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Green vertical accent line */
+.category-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+
+}
+
+.category-section h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #002f34;
+  margin-bottom: 16px;
+ 
+  text-transform: uppercase;
+}
+
+.category-path {
+  display: block;
+ 
+  font-size: 14px;
+}
+
+.category-text {
+  color: #5d8a94;
+  font-weight: 400;
+}
+
+.change-link, .back-link {
+  margin-left: 20px;
+  color: #23e5db;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.change-link:hover, .back-link:hover {
+  color: #1ab4ac;
+}
+
+.back-link {
+  background-color: rgba(35, 229, 219, 0.1);
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.category-tabs {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  overflow-x: auto;
+  gap: 10px;
+  padding-bottom: 5px;
+}
+
+.tab {
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  font-size: 14px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.tab.active {
+  background-color: #002f34;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* App content */
+.app-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* Footer styles */
+.app-footer {
+  padding: 16px;
+  background-color: #002f34;
+  color: white;
+  margin-top: auto;
+}
+
+.footer-logos {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.logo {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .App {
+    width: 100%;
   }
 }
