@@ -6,6 +6,31 @@
   padding: 0;
 }
 
+/* Navbar styling */
+.navbar {
+  width: 100%;
+  background-color: #fff;
+  padding: 10px 15px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.479);
+}
+
+.back-arrow {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #333;
+  padding: 5px 10px;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   background-color: #f8f8f8;
@@ -30,29 +55,71 @@ body::before {
   flex-direction: column;
   min-height: 100vh;
   background-color: #fff;
-  padding-left: 20vw;
-  padding-top: 4vw;
-  padding-right: 20vw;
+ 
 }
+.App nav{
+  background-color: #f7f8f9;
+}
+.App header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+}
+.App header h1{
+  font-size: 1.8vw;
+  font-weight: 700;
+}
+
+
+.App .app-content {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ffffff;
+  padding-left : 18vw;
+padding-right: 18vw;
+}
+
 
 /* Responsive padding for mobile screens */
 @media screen and (max-width: 768px) {
   .App {
-    padding-left: 1vw;
-    padding-right: 1vw;
-    padding-top: 3vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 3vw;
+  }
+  .App .app-content {
+    width: 100%;
+  
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #ffffff;
+    padding-left: 0;
+    
+    padding-right: 0;
   }
 }
+
+
 
 /* Header styles */
 .app-header {
   display: flex;
+  
   align-items: center;
   justify-content: space-between;
   padding: 20px 16px;
   background-color: #fff;
   position: relative;
   z-index: 100;
+}
+.app-header h1{
+
+font-size: 24px;
 }
 
 .back-button {
@@ -73,15 +140,35 @@ body::before {
 
 /* Category section */
 .category-section {
-  border: 1px solid #464646;
+  border: 1px solid #d6d6d6;
   background-color: #fff;
   border-bottom: none;
   position: relative;
   overflow: hidden;
 }
 
-.category-content {
-  padding: 16px 24px;
+@media screen and (max-width: 768px) {
+  .category-section {
+    border: none;
+    background-color: #fff;
+    border-bottom: none;
+    position: relative;
+    overflow: hidden;
+  }  
+  .App .app-header .header-title {
+   display: none;
+  }
+  .App nav .header-title-h1{
+    font-size: 22px;
+    display: block;
+  }
+}
+.header-title-h1{
+  display: none;
+}
+
+.category-content .category-path {
+  padding-bottom: 20px;
 }
 
 /* Green vertical accent line */
@@ -111,16 +198,16 @@ body::before {
 }
 
 .category-text {
-  color: #5d8a94;
+  color: #5070a8;
   font-weight: 400;
 }
 
 .change-link, .back-link {
   margin-left: 20px;
-  color: #23e5db;
-  text-decoration: none;
+  color: #245fc5;
+  text-decoration: underline;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   transition: color 0.2s ease;
 }
 

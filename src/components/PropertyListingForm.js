@@ -602,7 +602,7 @@ const PropertyListingForm = () => {
                 <div className="mobile-input-group">
                   <label htmlFor="mobile">Mobile Phone Number *</label>
                   <div className="mobile-input-container">
-                    <div className="country-code">+91</div>
+                  
                     <Field 
                       type="text" 
                       name="mobile" 
