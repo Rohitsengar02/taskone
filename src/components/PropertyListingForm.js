@@ -224,7 +224,7 @@ const PropertyListingForm = () => {
   };
 
   return (
-    <div className=" border-1 property-listing-container">
+    <div id='property-listing-form' className=" border-1 property-listing-container">
       <ToastContainer position="top-right" autoClose={5000} />
       
       <Formik
@@ -518,7 +518,7 @@ const PropertyListingForm = () => {
             <div className="form-section">
               <h2>CONFIRM YOUR LOCATION</h2>
               <div className="location-options">
-                <div 
+                <div id='list'
                   className={`location-option ${locationTab === 'LIST' ? 'selected' : ''}`}
                   onClick={() => setLocationTab('LIST')}
                 >
@@ -537,7 +537,7 @@ const PropertyListingForm = () => {
                 <Select
                   options={stateOptions}
                   onChange={(option) => setFieldValue('state', option.value)}
-                  placeholder="Select state"
+                  placeholder=""
                   className="react-select-container"
                   classNamePrefix="react-select"
                 />

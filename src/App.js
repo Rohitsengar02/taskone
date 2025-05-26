@@ -14,7 +14,7 @@ function App() {
             <nav className="navbar">
               <Link to="/listings" className="back-arrow">&lt;</Link>
               
-              <h1 className="header-title-h1">POST YOUR AD</h1>
+              <h1 className="header-title-h1">Post Your Ad</h1>
           
             </nav>
             <header className="app-header">
